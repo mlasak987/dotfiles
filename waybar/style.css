@@ -1,0 +1,87 @@
+* {
+    font-family: "JetBrainsMono Nerd Font, monospace, sans-serif";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+window#waybar {
+    border-radius: 16px;
+    background: transparent;
+    color: #ffffff
+}
+
+tooltip {
+    background: #0F0F0F;
+    border-radius: 16px;
+}
+
+tooltip label {
+    color: #d8d8d8;
+}
+
+#window,
+#workspaces {
+    border-radius: 28px;
+    margin: 4px 0 4px 14px;
+    padding: 14px 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#workspaces button {
+    min-width: 28px;
+    border-radius: 20px;
+    margin: 8px 0;
+    color: #d8d8d8;
+}
+
+#workspaces button:not(:last-child) {
+    margin-right: 4px;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#workspaces button.active,
+#workspaces button.active:hover {
+    background: #d8d8d8;
+    color: #0F0F0F;
+    border-style: hidden;
+}
+
+#custom-poweroff,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#workspaces {
+    padding: 0px 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#tray {
+    padding: 0px 16px;
+}
+
+#network {
+    border-radius: 28px 0 0 28px;
+    padding-left: 24px;
+}
+
+#battery.warning {
+    color: orange;
+}
+
+#battery.critical {
+    color: red;
+}
+
+#temperature.critical {
+    color: red;
+}
+
+#custom-poweroff {
+    padding-right: 24px;
+    border-radius: 0 28px 28px 0;
+}

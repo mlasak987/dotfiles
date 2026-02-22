@@ -1,0 +1,30 @@
+#window {
+    background-color: rgba(30, 30, 46, 0.9);
+    border: 2px solid #33ccff; 
+    border-radius: 10px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+#input {
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #313244;
+    color: #33ccff;
+}
+
+#prompt {
+    margin-right: 10px;
+    color: #00ff99;
+    font-weight: bold;
+}
+
+#entry:selected {
+    background-color: #33ccff;
+    color: #11111b; 
+    border-radius: 8px;
+}
+
+#text {
+    margin: 5px;
+}

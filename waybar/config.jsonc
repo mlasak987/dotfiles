@@ -1,0 +1,133 @@
+{
+	"position": "top",
+	"margin": "8 20 0",
+	"mod": "dock",
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		"tray",
+		"network",
+		"bluetooth",
+		"battery",
+		"pulseaudio",
+		"clock",
+		"custom/poweroff"
+	],
+	"hyprland/window": {
+		"format": "{}"
+	},
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": 3
+		},
+        "format": " <b>{icon}</b> {windows} ",
+	    "window-rewrite-default": "",
+        "window-rewrite": {
+            "firefox": "󰈹",
+            "thunderbird": "󰇮",
+			"kitty": "",
+			"code": "󰨞",
+			"caprine": "",
+			"discord": "",
+			"thunar": "",
+			"nm-connection-editor": "",
+			"blueman-manager": "",
+			"onlyoffice": "󰏆"
+        },
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-click": "activate"  
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 20
+	},
+	"network": {
+		"format-icons": [
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
+		"format-wifi": "{icon}",
+		"format-ethernet": "",
+		"format-linked": "󰄡",
+		"format-disconnected": "󰖪",
+		"tooltip-format": "{essid} ({signalStrength}%) - {gwaddr}",
+		"tooltip-format-ethernet": "{ifname} - {gwaddr}",
+		"tooltip-format-disconnected": "Disconnected",
+		"on-click": "bash ~/.config/waybar/scripts/wifi-menu.sh"
+	},
+	"bluetooth": {
+		"format": "󰂯",
+		"format-disabled": "󰂲",
+		"format-connected": "󰂱 {num_connections}",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"on-click": "blueman-manager"
+	},
+	"battery": {
+		"full-at": 95,
+		"states": {
+			"warning": 35,
+			"critical": 10
+		},
+		"format": "{icon}",
+		"format-plugged": "",
+		"format-charging": "󰂄",
+		"format-icons": [
+			"󰂎",
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹"
+		],
+		"tooltip-format": "{capacity}%"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟 0%",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click-right": "pavucontrol",
+		"on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "󱡏",
+			"hands-free": "󱡏",
+			"headset": "󱡏",
+			"default": [
+				"",
+				""
+			]
+		}
+	},
+	"clock": {
+		"format": "{:%H:%M %a %d-%m-%Y}",
+		"tooltip-format": "{calendar}",
+		"calendar": {
+			"format": {
+				"months": "<span color='#D3D04F'><b>{}</b></span>",
+				"days": "<span color='#93B1A6'><b>{}</b></span>",
+				"weekdays": "<span color='#8EAC50'><b>{}</b></span>",
+				"today": "<span color='#8EAC50'><b><u>{}</u></b></span>"
+			}
+		}
+	},
+	"custom/poweroff": {
+		"tooltip": false,
+		"format": "",
+		"on-click": "bash ~/.config/waybar/scripts/poweroff.sh"
+	}
+}

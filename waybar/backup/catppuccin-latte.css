@@ -1,0 +1,23 @@
+@define-color background #eff1f5;
+@define-color background-hard-contrast #ccd0da;
+@define-color background-soft-contrast #dce0e8;
+@define-color foreground #4c4f69;
+@define-color foreground-soft-contrast #ccd0da;
+
+@define-color black #4c4f69;
+@define-color red #d20f39;
+@define-color green #40a02b;
+@define-color yellow #df8e1d;
+@define-color blue #1e66f5;
+@define-color magenta #8839ef;
+@define-color cyan #209fb5;
+@define-color white #eff1f5;
+
+@define-color bright-black #4c4f69;
+@define-color bright-red #d20f39;
+@define-color bright-green #40a02b;
+@define-color bright-yellow #df8e1d;
+@define-color bright-blue #1e66f5;
+@define-color bright-magenta #8839ef;
+@define-color bright-cyan #209fb5;
+@define-color bright-white #eff1f5;
