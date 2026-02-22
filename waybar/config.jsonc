@@ -98,19 +98,12 @@
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"format-muted": "󰝟 0%",
-		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-click": "python ~/.config/waybar/scripts/volume-slider.py",
 		"on-click-right": "pavucontrol",
-		"on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
-		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-		"scroll-step": 5,
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2% && pactl list sink-inputs short | cut -f1 | xargs -r -I{} pactl set-sink-input-volume {} +2%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2% && pactl list sink-inputs short | cut -f1 | xargs -r -I{} pactl set-sink-input-volume {} -2%",
 		"format-icons": {
-			"headphone": "󱡏",
-			"hands-free": "󱡏",
-			"headset": "󱡏",
-			"default": [
-				"",
-				""
-			]
+			"default": ["", ""]
 		}
 	},
 	"clock": {
