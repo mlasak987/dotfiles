@@ -1,6 +1,6 @@
 {
 	"position": "top",
-	"margin": "8 20 0",
+	"margin": "8 20 0 20",
 	"mod": "dock",
 	"modules-left": [
 		"hyprland/workspaces"
@@ -36,7 +36,8 @@
 		"thunar": "",
 		"nm-connection-editor": "",
 		"blueman-manager": "",
-		"onlyoffice": "󰏆"
+		"onlyoffice": "󰏆",
+		"pavucontrol": ""
         },
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
@@ -99,9 +100,7 @@
 		"format": "{icon} {volume}%",
 		"format-muted": "󰝟 0%",
 		"on-click": "python ~/.config/waybar/scripts/volume-slider.py",
-		"on-click-right": "pavucontrol",
-		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2% && pactl list sink-inputs short | cut -f1 | xargs -r -I{} pactl set-sink-input-volume {} +2%",
-		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2% && pactl list sink-inputs short | cut -f1 | xargs -r -I{} pactl set-sink-input-volume {} -2%",
+		"on-click-right": "pwvucontrol",
 		"format-icons": {
 			"default": ["", ""]
 		}

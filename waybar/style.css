@@ -23,7 +23,7 @@ tooltip label {
 #workspaces {
     border-radius: 28px;
     margin: 4px 0 4px 14px;
-    padding: 14px 14px;
+    padding: 16px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -56,7 +56,8 @@ tooltip label {
 #network,
 #bluetooth,
 #workspaces {
-    padding: 0px 14px;
+    margin: 4px 0 4px 0px;
+    padding: 0px 16px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
