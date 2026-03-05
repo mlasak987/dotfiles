@@ -56,9 +56,13 @@ tooltip label {
 #network,
 #bluetooth,
 #workspaces {
-    margin: 4px 0 4px 0px;
+    margin: 4px 0px 4px 0px;
     padding: 0px 16px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+#network {
+  margin-left: 14px;
 }
 
 #tray {
