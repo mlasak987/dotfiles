@@ -22,6 +22,6 @@ EOF
         loginctl lock-session
         ;;
     "Log off")
-        swaymsg exit
+        hyprctl dispatch exit
         ;;
 esac

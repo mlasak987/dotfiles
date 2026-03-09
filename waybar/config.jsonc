@@ -28,7 +28,7 @@
 	    "window-rewrite-default": "",
         "window-rewrite": {
           "firefox": "󰈹",
-          "thunderbird": "󰇮",
+          "outlook-for-linux": "󰇮",
           "kitty": "",
           "code": "󰨞",
           "caprine": "",
