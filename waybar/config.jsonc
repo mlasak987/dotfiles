@@ -29,6 +29,7 @@
         "window-rewrite": {
           "firefox": "󰈹",
           "outlook-for-linux": "󰇮",
+          "thunderbird": "󰇮",
           "kitty": "",
           "code": "󰨞",
           "caprine": "",
@@ -38,7 +39,9 @@
           "blueman-manager": "",
           "onlyoffice": "󰏆",
           "pavucontrol": "",
-          "xournalpp": "󰠮"
+          "xournalpp": "󰠮",
+          "gimp": "",
+          "sweethome3d": "󱅙"
         },
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
