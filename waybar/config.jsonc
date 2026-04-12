@@ -41,7 +41,11 @@
           "pavucontrol": "",
           "xournalpp": "󰠮",
           "gimp": "",
-          "sweethome3d": "󱅙"
+          "sweethome3d": "󱅙",
+          "Minecraft 1.21.4": "󰍳",
+          "prismlauncher": "󰍳",
+          "steam": "",
+          "blender": ""
         },
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
