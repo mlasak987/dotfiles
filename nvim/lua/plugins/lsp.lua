@@ -9,14 +9,14 @@ return {
             "--background-index",
             "--clang-tidy",
             "--header-insertion=never",
-            "--query-driver=/usr/bin/i686-elf-gcc",
+            "--query-driver=/usr/bin/i686-elf-gcc,**/*gcc*,**/*g++*,**/*clang*,**/*clang++*,/home/mlasak/.espressif/tools/**/*gcc*,/home/mlasak/.espressif/tools/**/*g++*",
           },
           init_options = {
             fallbackFlags = {
               "-ffreestanding",
               "-Iinclude",
               "-I.",
-              "--target=i686-elf",
+              "--target=i686-elf"
             },
           },
         },

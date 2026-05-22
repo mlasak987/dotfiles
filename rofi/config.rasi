@@ -1,0 +1,97 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    display-drun: "Apps:";
+    display-run: "Run:";
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+* {
+    /* Zmienne kolorów */
+    bg-col: rgba(30, 30, 46, 0.9);
+    border-col: #33ccff;
+    selected-col: #33ccff;
+    selected-fg-col: #11111b;
+    prompt-col: #00ff99;
+    input-bg-col: #313244;
+    fg-col: #cdd6f4;
+    
+    /* Globalna przezroczystość tła */
+    background-color: transparent;
+}
+
+window {
+    width: 30%;
+    height: 40%;
+    location: center;
+    background-color: @bg-col;
+    border: 2px solid;
+    border-color: @border-col;
+    border-radius: 10px;
+}
+
+mainbox {
+    padding: 10px;
+}
+
+inputbar {
+    background-color: @input-bg-col;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @prompt-col;
+    font: "JetBrainsMono Nerd Font Bold 12";
+    margin: 0px 10px 0px 0px;
+    vertical-align: 0.5;
+}
+
+entry {
+    text-color: @border-col;
+    placeholder: "Szukaj...";
+    placeholder-color: #595959;
+    vertical-align: 0.5;
+}
+
+listview {
+    margin: 15px 5px 5px 5px;
+    columns: 1;
+    lines: 7;
+    border: 0px;
+    background-color: transparent;
+}
+
+/* Wymuszamy wygląd elementów, niszcząc domyślny beż */
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg-col;
+}
+
+element {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0px 10px 0px 0px;
+    background-color: transparent;
+}
+
+element-text {
+    text-color: inherit;
+    background-color: transparent;
+    vertical-align: 0.5;
+}
+
+/* Kolor zaznaczonego elementu */
+element selected.normal,
+element selected.active {
+    background-color: @selected-col;
+    text-color: @selected-fg-col;
+}

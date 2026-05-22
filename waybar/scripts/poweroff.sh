@@ -1,14 +1,8 @@
 #!/bin/bash
-case $(wofi -d -L 6 -l 3 -W 100 -x -100 -y 10 --prompt "Select Option:" -i \
-    -D dynamic_lines=true << EOF | sed 's/^ *//'
-    Shutdown
-    Reboot
-    Log off
-    Sleep
-    Lock
-    Cancel
-EOF
-) in
+
+OPTIONS="Shutdown\nReboot\nLog off\nSleep\nLock\nCancel"
+
+case $(echo -e "$OPTIONS" | rofi -dmenu -i -p "Power:") in
     "Shutdown")
         systemctl poweroff
         ;;
@@ -23,5 +17,8 @@ EOF
         ;;
     "Log off")
         hyprctl dispatch exit
+        ;;
+    "Cancel"|*)
+        exit
         ;;
 esac

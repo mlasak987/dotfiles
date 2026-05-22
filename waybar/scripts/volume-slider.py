@@ -29,7 +29,7 @@ class VolumeSlider(Gtk.Window):
         label.set_name("prompt")
         vbox.pack_start(label, False, False, 0)
 
-        ad1 = Gtk.Adjustment(value=current_vol, lower=0, upper=100, step_increment=1, page_increment=10, page_size=0)
+        ad1 = Gtk.Adjustment(value=current_vol, lower=0, upper=140, step_increment=1, page_increment=10, page_size=0)
         self.scale = Gtk.Scale(orientation=Gtk.Orientation.HORIZONTAL, adjustment=ad1)
         self.scale.set_name("input")
         self.scale.set_digits(0)
